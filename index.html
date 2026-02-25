@@ -1,6 +1,111 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Brain Tumor Detection AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+    }
+    .upload-box {
+      border: 2px dashed #00e6e6;
+      padding: 40px;
+      text-align: center;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .upload-box:hover {
+      background: rgba(0,230,230,0.1);
+    }
+    input[type="file"] {
+      display: none;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #00e6e6;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00cccc;
+    }
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+      border-radius: 10px;
+      display: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
 <body>
-  <h1>Brain Tumor AI Web</h1>
-  <p>GitHub Pages is working!</p>
+
+<header>
+  <h1>🧠 Brain Tumor Detection</h1>
+  <p>AI-powered MRI analysis using Deep Learning</p>
+</header>
+
+<div class="container">
+  <label class="upload-box">
+    📂 Click to upload MRI image
+    <input type="file" accept="image/*">
+  </label>
+
+  <center>
+    <button onclick="showResult()">Analyze Image</button>
+  </center>
+
+  <div class="result" id="result">
+    <h3>Result</h3>
+    <p>🟢 No Tumor Detected (Demo)</p>
+  </div>
+</div>
+
+<footer>
+  © 2026 Brain Tumor AI Project | Built with GitHub Pages
+</footer>
+
+<script>
+  function showResult() {
+    document.getElementById("result").style.display = "block";
+  }
+</script>
+
 </body>
 </html>
